@@ -2,7 +2,8 @@ import React , {useEffect,useState}from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App() { 
+  let data = {title: "Waiting for Data"};
   const [todo,setTodo] = useState(data);
   const [isData, setData] = useState(false);
   const [isFetching, setFetching] = useState(false)
