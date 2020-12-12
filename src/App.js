@@ -1,5 +1,5 @@
 import React , {useEffect,useState}from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() { 
@@ -19,15 +19,21 @@ function App() {
     }
     fetchData();
   },[isData]);
-}
-if(isFetching){
-  return <div>Data Loading.....</div>
+
+
+  if(isFetching == true){
+    return <div>Data Loading.....</div>
+  }
+  
+  return (
+    <div >
+      Hello Fetch
+      <span>Title: {todo.title}</span>
+      <span>UserId: {todo.userId}</span>
+    </div>
+  )
+
 }
 
-return (
-  <div >
-    Hello Fetch
-    <span>Title: {todo.title}</span>
-  </div>
-);
+
 export default App;
